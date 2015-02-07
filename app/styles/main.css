@@ -1,8 +1,8 @@
-.clearfix :before {
+.clearfix:before {
   display: table;
   content: " ";
 }
-.clearfix :after {
+.clearfix:after {
   display: table;
   content: " ";
   clear: both;

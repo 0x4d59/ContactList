@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ContactList">
 <head>
   <meta charset="UTF-8">
   <title>ContactList</title>
   <link rel="stylesheet" href="vendors/bootstrap-3.3.2-dist/css/bootstrap.css">
   <link rel="stylesheet" href="styles/main.css">
-  <script src="../node_modules/angular/angular.js"></script>
+  <script src="vendors/angular.js"></script>
+  <script src="vendors/angular-route.js"></script>
+  <script src="scripts/controllers/controllers.js"></script>
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
@@ -29,51 +31,21 @@
   <!-- end favicon -->
 
 </head>
-<body>
+<body ng-controller="AppSaverCntrl">
   <div class="wrapper">
     <div class="window">
       <div class="title">Контакты</div>
       <div class="nav-buttons clearfix">
         <div class="add-button">
-          <a class="btn btn-default" href="#" role="button">Добавить</a>
+          <a class="btn btn-default" href="#/addperson" role="button">Добавить</a>
         </div>
         <div class="back-button"></div>
         <div class="style-button">
-          <div class="list-style"></div>
-          <div class="tile-style"></div>
+          <a href="#/"><div class="list-style"></div></a>
+          <a href="#/tile"><div class="tile-style"></div></a>
         </div>
       </div>
-      <div class="main-window clearfix">
-        <div class="left">
-          <div class="person-photo"></div>
-          <div class="buttons clearfix">
-            <a class="btn btn-default save-btn" href="#" role="button">Сохранить</a>
-            <a class="btn btn-default del-btn" href="#" role="button">Удалить</a>
-          </div>
-        </div>
-        <div class="right">
-          <form action="">
-            <div class="name">
-              <label for="name">Имя</label>
-              <input type="text" class="form-control" id="name" placeholder="Имя контакта">
-            </div>
-            <div class="surname">
-              <label for="surname">Фамилия</label>
-              <input type="text" class="form-control" id="surname" placeholder="Фамилия контакта">
-            </div>
-            <div class="contact-info">
-              <label for="email">Контактная информация</label>
-              <div class="input-group email-group">
-                <div class="input-group-addon email"></div>
-                <input type="email" class="form-control" id="email" placeholder="yourmail@gmail.com">
-              </div>
-              <div class="input-group phone-group">
-                <div class="input-group-addon phone"></div>
-                <input type="tel" class="form-control" placeholder="+7 911 123 4566">
-              </div>
-            </div>
-          </form>
-        </div>
+      <div class="main-window clearfix ng-view">
       </div>
     </div>
   </div>
