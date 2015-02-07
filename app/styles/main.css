@@ -1,3 +1,145 @@
+.clearfix :before {
+  display: table;
+  content: " ";
+}
+.clearfix :after {
+  display: table;
+  content: " ";
+  clear: both;
+}
 body {
-  background: #468374;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.wrapper {
+  background: url(../../images/background.jpg) no-repeat;
+  background-size: cover;
+  padding: 70px;
+}
+.window {
+  width: 800px;
+  margin: 0 auto;
+}
+.title {
+  padding: 12px 0;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.add-button {
+  float: left;
+}
+.back-button {
+  height: 27px;
+  width: 26px;
+  background: url('../../images/sprite.png') no-repeat 0px -45px;
+  cursor: pointer;
+  float: left;
+  margin-top: 7px;
+}
+.back-button:hover {
+  background: url('../../images/sprite.png') no-repeat 0px 0px;
+}
+.style-button {
+  float: right;
+  margin-top: 10px;
+}
+.list-style {
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  background: url(../../images/sprite.png) no-repeat 0px -131px;
+  float: left;
+  margin-top: 3px;
+}
+.list-style:hover {
+  background: url(../../images/sprite.png) no-repeat 0px -91px;
+}
+.tile-style {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  background: url('../../images/sprite.png') no-repeat 0px -238px;
+  float: left;
+  margin-left: 27px;
+}
+.tile-style:hover {
+  background: url('../../images/sprite.png') no-repeat 0px -283px;
+}
+.main-window {
+  margin-top: 18px;
+  background: #f2eff0;
+  border-radius: 3px;
+  padding: 15px;
+}
+.tile-entry {
+  width: 130px;
+  font-size: 12px;
+  text-align: center;
+  float: left;
+  margin-left: 30px;
+  margin-top: 7px;
+}
+.tile-entry:nth-child(5n+1) {
+  margin-left: 0;
+}
+.img-container {
+  height: 130px;
+  border: 1px solid #cccccc;
+  background: #eeeeee;
+  border-radius: 3px;
+}
+.entry-name {
+  margin-top: 10px;
+}
+.entry-phone {
+  margin-top: 7px;
+}
+.left {
+  float: left;
+  width: 200px;
+  margin-left: 84px;
+  margin-top: 62px;
+}
+.right {
+  float: right;
+  width: 268px;
+  margin-right: 90px;
+  margin-bottom: 61px;
+  margin-top: 57px;
+}
+.person-photo {
+  width: 200px;
+  height: 200px;
+  background: #eeeeee;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+.buttons {
+  margin-top: 10px;
+}
+.buttons .save-btn {
+  float: left;
+}
+.buttons .del-btn {
+  float: right;
+}
+.surname {
+  margin-top: 13px;
+}
+.contact-info {
+  margin-top: 19px;
+}
+.input-group {
+  width: 268px;
+}
+.email {
+  background: url('../../images/sprite.png') no-repeat 12px -161px;
+  width: 38px;
+}
+.phone-group {
+  margin-top: 17px;
+}
+.phone {
+  width: 38px;
+  background: url('../../images/sprite.png') no-repeat 10px -194px;
 }

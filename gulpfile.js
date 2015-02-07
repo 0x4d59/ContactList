@@ -12,7 +12,7 @@ gulp.task('less', function () {
 
 gulp.task('default', function () {
   gulp.run('less');
-  gulp.watch('app/styles/less/main.less', function () {
+  gulp.watch('app/styles/less/*.less', function () {
     gulp.run('less');
   })
 });
