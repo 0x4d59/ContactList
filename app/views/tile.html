@@ -1,5 +1,5 @@
 <figure class="tile-entry" ng-repeat="person in persons">
-  <div class="img-container"></div>
-  <figcaption class="entry-name">{{person.name + person.surname}}</figcaption>
+  <div class="img-container" ng-click="goToPersonPage(person.$id)"></div>
+  <figcaption class="entry-name">{{person.name + ' ' + person.surname}}</figcaption>
   <figcaption class="entry-phone">{{person.phone}}</figcaption>
 </figure>

@@ -10,7 +10,7 @@
   </thead>
   
   
-  <tr ng-repeat="person in persons">
+  <tr ng-repeat="person in persons" ng-click="goToPersonPage(person.$id)">
     <td>{{person.$id}}</td>
     <td>{{person.name}}</td>
     <td>{{person.surname}}</td>

@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="styles/main.css">
   <script src="vendors/angular.js"></script>
   <script src="vendors/angular-route.js"></script>
-  <script src="scripts/controllers/controllers.js"></script>
   <script src="vendors/firebase.js"></script>
   <script src="vendors/angularfire.min.js"></script>
+  <script src='scripts/app.js'></script>
+  <script src="scripts/controllers.js"></script>
 
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
@@ -33,18 +34,18 @@
   <!-- end favicon -->
 
 </head>
-<body ng-controller="AppSaverCntrl">
+<body ng-controller="AppSaverController">
   <div class="wrapper">
     <div class="window">
       <div class="title" ng-bind="appTitle"></div>
       <div class="nav-buttons clearfix">
-        <div class="add-button" ng-show="lists" ng-click="addPersonForm()">
+        <div class="add-button" ng-show="lists" ng-click="personStyle()">
           <a class="btn btn-default" href="#/addperson" role="button">Добавить</a>
         </div>
         <a href="#/"><div class="back-button" ng-show="!lists" ng-click="listStyles()"></div></a>
         <div class="style-button" ng-show="lists">
-          <a href="#/"><div class="list-style" ng-class="{activeButton: appStyle == 'list'}" ng-click="changeAppstyle('list')"></div></a>
-          <a href="#/tile"><div class="tile-style" ng-class="{activeButton: appStyle == 'tile'}" ng-click="changeAppstyle('tile')"></div></a>
+          <a href="#/"><div class="list-style" ng-class="{activeButton: appStyle == 'list'}" ng-click="appStyle = 'list'"></div></a>
+          <a href="#/tile"><div class="tile-style" ng-class="{activeButton: appStyle == 'tile'}" ng-click="appStyle = 'tile'"></div></a>
         </div>
       </div>
       <div class="main-window clearfix ng-view">
