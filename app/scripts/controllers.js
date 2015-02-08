@@ -62,3 +62,10 @@ angular.module('ContactList').controller('ListController', ['$scope', '$location
     $location.path('/personpage/' + id);
   };
 }]);
+
+angular.module('ContactList').controller('PersonDataController', ['$scope', '$location', function ($scope, $location) {
+  $scope.getId = function () {
+    return $location.url().slice($location.url().lastIndexOf('/') + 1);
+  }
+  $scope.idName = $scope.getId();
+}])

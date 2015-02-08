@@ -19,6 +19,6 @@ angular.module('ContactList').config(['$routeProvider',
       }).
       when('/personpage/:id', {
         templateUrl: '../../views/personpage.html',
-        controller: 'AppSaverController'
+        controller: 'PersonDataController'
       })
   }]);

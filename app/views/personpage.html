@@ -4,19 +4,19 @@
 <div class="right">
   <div class="name">
     <label for="name">Имя</label>
-    <p>{{console.log($location)}}</p>
+    <p>{{persons.$getRecord(idName).name}}</p>
   </div>
   <div class="surname">
     <label for="surname">Фамилия</label>
-    <p>Порошенко</p>
+    <p>{{persons.$getRecord(idName).surname}}</p>
   </div>
   <div class="contact-info">
     <label for="email">Контактная информация</label>
     <div class="input-group email-group">
-      <div class="person-email">gjdfglkd</div>
+      <div class="person-email">{{persons.$getRecord(idName).email}}</div>
     </div>
     <div class="input-group phone-group">
-      <div class="person-phone">874632847</div>
+      <div class="person-phone">{{persons.$getRecord(idName).phone}}</div>
     </div>
   </div>
 </div>
