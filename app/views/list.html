@@ -8,11 +8,15 @@
       <th>Email</th>
     </tr>
   </thead>
-  <tr>
-    <td>1</td>
-    <td>Сид</td>
-    <td>Вишес</td>
-    <td>anarchy@mail.ru</td>
-    <td>5348975</td>
+  
+  
+  <tr ng-repeat="person in persons">
+    <td>{{person.$id}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.surname}}</td>
+    <td>{{person.phone}}</td>
+    <td>{{person.email}}</td>
   </tr>
+
+
 </table>
