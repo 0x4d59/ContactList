@@ -11,7 +11,7 @@
   
   
   <tr ng-repeat="person in persons" ng-click="goToPersonPage(person.$id)" class="person-item">
-    <td>{{person.$id}}</td>
+    <td>{{persons.$indexFor(person.$id) + 1}}</td>
     <td>{{person.name}}</td>
     <td>{{person.surname}}</td>
     <td>{{person.phone}}</td>
