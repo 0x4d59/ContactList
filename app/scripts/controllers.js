@@ -60,5 +60,5 @@ angular.module('ContactList').controller('ListController', ['$scope', '$location
   $scope.goToPersonPage = function (id) {
     $scope.personStyle();
     $location.path('/personpage/' + id);
-  }
+  };
 }]);
