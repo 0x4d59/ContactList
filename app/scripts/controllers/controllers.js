@@ -18,4 +18,22 @@ app.config(['$routeProvider',
   }]);
 
 app.controller('AppSaverCntrl', function ($scope) {
+  $scope.appStyle = 'list';
+  $scope.lists = true;
+  $scope.appTitle = 'контакты';
+
+  $scope.changeAppstyle = function (button) {
+    $scope.appStyle = button;
+  };
+
+  $scope.addPersonForm = function () {
+    $scope.lists = false;
+    $scope.appTitle = 'контакт';
+  };
+
+  $scope.listStyles = function () {
+    $scope.lists = true;
+    $scope.appStyle = 'list';
+    $scope.appTitle = 'контакты';
+  }
 });

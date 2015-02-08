@@ -54,6 +54,9 @@ body {
 .list-style:hover {
   background: url(../../images/sprite.png) no-repeat 0px -91px;
 }
+.list-style.activeButton {
+  background: url(../../images/sprite.png) no-repeat 0px -91px;
+}
 .tile-style {
   height: 25px;
   width: 25px;
@@ -63,6 +66,9 @@ body {
   margin-left: 27px;
 }
 .tile-style:hover {
+  background: url('../../images/sprite.png') no-repeat 0px -283px;
+}
+.tile-style.activeButton {
   background: url('../../images/sprite.png') no-repeat 0px -283px;
 }
 .main-window {

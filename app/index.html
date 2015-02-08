@@ -34,15 +34,15 @@
 <body ng-controller="AppSaverCntrl">
   <div class="wrapper">
     <div class="window">
-      <div class="title">Контакты</div>
+      <div class="title" ng-bind="appTitle"></div>
       <div class="nav-buttons clearfix">
-        <div class="add-button">
+        <div class="add-button" ng-show="lists" ng-click="addPersonForm()">
           <a class="btn btn-default" href="#/addperson" role="button">Добавить</a>
         </div>
-        <div class="back-button"></div>
-        <div class="style-button">
-          <a href="#/"><div class="list-style"></div></a>
-          <a href="#/tile"><div class="tile-style"></div></a>
+        <a href="#/"><div class="back-button" ng-show="!lists" ng-click="listStyles()"></div></a>
+        <div class="style-button" ng-show="lists">
+          <a href="#/"><div class="list-style" ng-class="{activeButton: appStyle == 'list'}" ng-click="changeAppstyle('list')"></div></a>
+          <a href="#/tile"><div class="tile-style" ng-class="{activeButton: appStyle == 'tile'}" ng-click="changeAppstyle('tile')"></div></a>
         </div>
       </div>
       <div class="main-window clearfix ng-view">
