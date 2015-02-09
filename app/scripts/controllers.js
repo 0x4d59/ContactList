@@ -42,6 +42,7 @@ angular.module('ContactList').controller('AddPersonController', ['$scope', '$fir
   };
 
   $scope.clearQuery();
+  $scope.personStyle();
 
   $scope.basePush = function () {
 
@@ -57,6 +58,7 @@ angular.module('ContactList').controller('AddPersonController', ['$scope', '$fir
     }
   };
 
+
   $scope.resetForm = function () {
     $scope.newPerson = {
       'name': '',
@@ -70,8 +72,9 @@ angular.module('ContactList').controller('AddPersonController', ['$scope', '$fir
 
 angular.module('ContactList').controller('ListController', ['$scope', '$location', function ($scope, $location) {
   $scope.goToPersonPage = function (id) {
-    $scope.personStyle();
+    // $scope.personStyle();
     $location.path('/personpage/' + id);
+    $scope.listStyles();
   };
 }]);
 
@@ -80,4 +83,5 @@ angular.module('ContactList').controller('PersonDataController', ['$scope', '$lo
     return $location.url().slice($location.url().lastIndexOf('/') + 1);
   }
   $scope.idName = $scope.getId();
+  $scope.personStyle();
 }])
