@@ -1,6 +1,6 @@
 // module
 
-angular.module('ContactList', ['ngRoute', 'firebase']);
+angular.module('ContactList', ['ngRoute', 'firebase', 'ngAnimate']);
 
 angular.module('ContactList').config(['$routeProvider',
   function($routeProvider) {

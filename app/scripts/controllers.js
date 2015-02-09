@@ -15,6 +15,10 @@ angular.module('ContactList').controller('AppSaverController', ['$scope', '$fire
   $scope.changeAppstyle = function (button) {
     $scope.appStyle = button;
   };
+  
+  $scope.clearQuery = function () {
+    $scope.query = '';
+  }
 
   $scope.personStyle = function () {
     $scope.lists = false;

@@ -5,8 +5,11 @@
   <title>ContactList</title>
   <link rel="stylesheet" href="vendors/bootstrap-3.3.2-dist/css/bootstrap.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animation.css">
+  <script src="vendors/jquery-1.11.2.js"></script>
   <script src="vendors/angular.js"></script>
   <script src="vendors/angular-route.js"></script>
+  <script src="vendors/angular-animate.js"></script>
   <script src="vendors/firebase.js"></script>
   <script src="vendors/angularfire.min.js"></script>
   <script src='scripts/app.js'></script>
@@ -36,7 +39,7 @@
 </head>
 <body ng-controller="AppSaverController">
   <div class="wrapper">
-    <div class="window">
+    <div class="window" >
       <div class="title" ng-bind="appTitle"></div>
       <div class="nav-buttons clearfix">
         <div class="add-button" ng-show="lists" ng-click="personStyle()">
@@ -52,7 +55,9 @@
         <label for='search-field'>Поиск</label>
         <input type="text" id="search-field" name="search-field" ng-model="query">
       </div>
-      <div class="main-window clearfix ng-view">
+      <div class="view-container">
+        <div class="main-window clearfix view-frame" ng-view>
+        </div>
       </div>
     </div>
   </div>

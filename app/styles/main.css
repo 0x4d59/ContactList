@@ -12,7 +12,7 @@ body {
 }
 .wrapper {
   background: url(../../images/background.jpg) no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   padding: 40px;
 }
 .window {
