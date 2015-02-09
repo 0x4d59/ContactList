@@ -27,7 +27,7 @@ angular.module('ContactList').controller('AppSaverController', ['$scope', '$fire
   }
 }]);
 
-angular.module('ContactList').controller('AddPersonController', ['$scope', '$firebase', function ($scope, $firebase) {
+angular.module('ContactList').controller('AddPersonController', ['$scope', '$firebase', '$location', function ($scope, $firebase, $location) {
   $scope.newPerson = {
     'name': '',
     'surname': '',
@@ -37,12 +37,16 @@ angular.module('ContactList').controller('AddPersonController', ['$scope', '$fir
   };
   $scope.basePush = function () {
 
-    var ref = new Firebase("https://greatcontactlist.firebaseio.com/");
-    var sync = $firebase(ref);
+    if ($scope.personAdd.$valid) {
+      var ref = new Firebase("https://greatcontactlist.firebaseio.com/");
+      var sync = $firebase(ref);
 
-    var messages = sync.$asArray();
-    messages.$add($scope.newPerson);
-    messages.$save($scope.newPerson)
+      var messages = sync.$asArray();
+      messages.$add($scope.newPerson);
+      messages.$save($scope.newPerson);
+
+      $location.path('/');
+    }
   };
 
   $scope.resetForm = function () {

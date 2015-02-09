@@ -160,3 +160,6 @@ body {
 .person-item {
   cursor: pointer;
 }
+.add-person-form .ng-touched.ng-invalid-pattern {
+  background: #F5B3B3;
+}

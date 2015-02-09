@@ -15,7 +15,7 @@ angular.module('ContactList').config(['$routeProvider',
       }).
       when('/addperson', {
         templateUrl: '../../views/addcontact.html',
-        controller: 'AppSaverController'
+        controller: 'AddPersonController'
       }).
       when('/personpage/:id', {
         templateUrl: '../../views/personpage.html',

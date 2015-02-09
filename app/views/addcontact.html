@@ -1,29 +1,29 @@
-<form ng-submit="basePush()">
+<form name="personAdd" class="add-person-form">
   <div class="left">
     <div class="person-photo"></div>
     <div class="buttons clearfix">
-      <a href="#/"><button class="btn btn-default save-btn" role="button" ng-click="listStyles()">Сохранить</button></a>
+      <button class="btn btn-default save-btn" role="button" ng-click="basePush()">Сохранить</button>
       <button type="reset" class="btn btn-default del-btn" role="button" ng-click="resetForm()">Удалить</button>
     </div>
   </div>
   <div class="right">
     <div class="name">
       <label for="name">Имя</label>
-      <input type="text" class="form-control" id="name" placeholder="Имя контакта" ng-model="newPerson.name">
+      <input type="text" class="form-control" name="personName" id="name" required placeholder="Имя контакта" ng-model="newPerson.name">
     </div>
     <div class="surname">
       <label for="surname">Фамилия</label>
-      <input type="text" class="form-control" id="surname" placeholder="Фамилия контакта" ng-model="newPerson.surname">
+      <input type="text" class="form-control" id="surname" name="personSurname" required placeholder="Фамилия контакта" ng-model="newPerson.surname">
     </div>
     <div class="contact-info">
       <label for="email">Контактная информация</label>
       <div class="input-group email-group">
         <div class="input-group-addon email"></div>
-        <input type="email" class="form-control" id="email" placeholder="yourmail@gmail.com" ng-model="newPerson.email">
+        <input type="email" class="form-control" id="email" required name="personEmail" placeholder="yourmail@gmail.com" ng-model="newPerson.email">
       </div>
       <div class="input-group phone-group">
         <div class="input-group-addon phone"></div>
-        <input type="tel" class="form-control" placeholder="+7 911 123 4566" ng-model="newPerson.phone">
+        <input type="tel" class="form-control" placeholder="+7 911 123 4566" ng-model-options="{ updateOn: 'blur'}" ng-pattern="/^\+\d{11}$/" required name="personPhone" ng-model="newPerson.phone">
       </div>
     </div>
   </div>
