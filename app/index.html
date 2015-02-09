@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ContactList">
+<head>
+  <meta charset="UTF-8">
+  <title>ContactList</title>
+  <link rel="stylesheet" href="vendors/bootstrap-3.3.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animation.css">
+  <script src="vendors/jquery-1.11.2.js"></script>
+  <script src="vendors/angular.js"></script>
+  <script src="vendors/angular-route.js"></script>
+  <script src="vendors/angular-animate.js"></script>
+  <script src="vendors/firebase.js"></script>
+  <script src="vendors/angularfire.min.js"></script>
+  <script src='scripts/app.js'></script>
+  <script src="scripts/controllers.js"></script>
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- end favicon -->
+
+</head>
+<body ng-controller="AppSaverController">
+  <div class="wrapper">
+    <div class="window" >
+      <div class="title" ng-bind="appTitle"></div>
+      <div class="nav-buttons clearfix">
+        <div class="add-button" ng-show="lists" ng-click="personStyle()">
+          <a class="btn btn-default" href="#/addperson" role="button">Добавить</a>
+        </div>
+        <a href="#/"><div class="back-button" ng-show="!lists" ng-click="listStyles()"></div></a>
+        <div class="style-button" ng-show="lists">
+          <a href="#/"><div class="list-style" ng-class="{activeButton: appStyle == 'list'}" ng-click="appStyle = 'list'"></div></a>
+          <a href="#/tile"><div class="tile-style" ng-class="{activeButton: appStyle == 'tile'}" ng-click="appStyle = 'tile'"></div></a>
+        </div>
+      </div>
+      <div class="search" ng-show="lists">
+        <label for='search-field'>Поиск</label>
+        <input type="text" id="search-field" name="search-field" ng-model="query" ng-focus="clearQuery()">
+      </div>
+      <div class="view-container">
+        <div class="main-window clearfix view-frame" ng-view></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
