@@ -10,7 +10,7 @@
   </thead>
   
   
-  <tr ng-repeat="person in persons" ng-click="goToPersonPage(person.$id)" class="person-item">
+  <tr ng-repeat="person in persons | filter:query" ng-click="goToPersonPage(person.$id)" class="person-item">
     <td>{{persons.$indexFor(person.$id) + 1}}</td>
     <td>{{person.name}}</td>
     <td>{{person.surname}}</td>
