@@ -40,6 +40,9 @@ angular.module('ContactList').controller('AddPersonController', ['$scope', '$fir
     'phone': '',
     'photo': ''
   };
+
+  $scope.clearQuery();
+
   $scope.basePush = function () {
 
     if ($scope.personAdd.$valid) {

@@ -53,11 +53,10 @@
       </div>
       <div class="search" ng-show="lists">
         <label for='search-field'>Поиск</label>
-        <input type="text" id="search-field" name="search-field" ng-model="query">
+        <input type="text" id="search-field" name="search-field" ng-model="query" ng-focus="clearQuery()">
       </div>
       <div class="view-container">
-        <div class="main-window clearfix view-frame" ng-view>
-        </div>
+        <div class="main-window clearfix view-frame" ng-view></div>
       </div>
     </div>
   </div>
