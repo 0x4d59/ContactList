@@ -48,6 +48,10 @@
           <a href="#/tile"><div class="tile-style" ng-class="{activeButton: appStyle == 'tile'}" ng-click="appStyle = 'tile'"></div></a>
         </div>
       </div>
+      <div class="search" ng-show="lists">
+        <label for='search-field'>Поиск</label>
+        <input type="text" id="search-field" name="search-field" ng-model="query">
+      </div>
       <div class="main-window clearfix ng-view">
       </div>
     </div>

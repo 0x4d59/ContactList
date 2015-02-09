@@ -10,6 +10,7 @@ angular.module('ContactList').controller('AppSaverController', ['$scope', '$fire
   $scope.appStyle = 'list';
   $scope.lists = true;
   $scope.appTitle = 'контакты';
+  $scope.query = '';
 
   $scope.changeAppstyle = function (button) {
     $scope.appStyle = button;
